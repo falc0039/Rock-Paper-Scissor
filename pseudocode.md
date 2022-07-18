@@ -20,3 +20,15 @@ create variables for user and cpu score
 put the other code inside this function of game of five
 add points to score of cpu and player if they win
 loop over a playround function that plays one round, until five rounds are played
+
+ADD User Interface:
+use buttons for the rps options
+select element for number of times played with options
+reset button for resetting the game
+display player and cpuscore and change score based on round winner 
+
+button(for every rps option) addeventlistener when clicked to :
+check cpu and player selection and who won,
+change cpu or playerscore,
+add text element on the page saying who won the round
+add in function that checks whether the game's over and displays message with the result and disables the rps buttons
