@@ -18,19 +18,7 @@ const roundResults = document.querySelector('.roundResults');
 let cpuScoreCount = 0;
 let playerScoreCount = 0;
 let playTo = document.querySelector('#playto');
-// let startGame = prompt('Press enter to start!')
 
-
-// console.log(playRound(playerSelection, computerSelection))
-// let playerSelection = prompt('Rock, paper, scissor, enter one!');
-// let computerSelection = computerPlay();
-
-// if (playerSelection.toLowerCase() === (rps[0] || rps[1] || rps[2])) {
-//     console.log(playRound(playerSelection, computerSelection))
-//     console.log('hello')
-// } else {
-//     playerSelection = prompt('Please enter a valid choice!')
-// }
 let playRound = function (playerSelection, computerSelection) {
     let roundResult = document.createElement('p');
             if (playerSelection === rps[0] && computerSelection === rps[1]) {
@@ -126,24 +114,7 @@ resetBtn.addEventListener('click', () => {
 
 
 
-        // let playerSelection = prompt('Rock, paper, scissor, enter one!');
-     
-    //     if (playerSelection.toLowerCase() === rps[0] ||
-    //         playerSelection.toLowerCase() === rps[1] ||
-    //         playerSelection.toLowerCase() === rps[2]) {
-    //         console.log(playRound(playerSelection, computerSelection))
-    //     } else {
-    //         alert('Please enter a valid choice!')
-    //     }
-    //     console.log(`Round ${roundsPlayed}: Playerscore is ${playerScore}, CPUScore is ${cpuScore}`)
-    
-    // if (playerScore < cpuScore) {
-    //     console.log('You have lost! ')
-    // } else if (playerScore > cpuScore) {
-    //     console.log('You are the winner, congratulations!')
-    // } else {
-    //     console.log(`It's a tie, you are evenly matched!`)
-    // }
+ 
 
 
 
