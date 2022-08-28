@@ -20,6 +20,9 @@ let playerScoreCount = 0;
 let playTo = document.querySelector('#playto');
 
 let playRound = function (playerSelection, computerSelection) {
+    while (roundResults.firstChild) {
+        roundResults.removeChild(roundResults.lastChild);
+    }
     let roundResult = document.createElement('p');
             if (playerSelection === rps[0] && computerSelection === rps[1]) {
                 cpuScoreCount += 1;
@@ -46,7 +49,6 @@ let playRound = function (playerSelection, computerSelection) {
                 roundsPlayed += 1;
                 roundResult.innerText = 'You win! Scissor beats Paper!';
             } else {
-                roundsPlayed += 1;
                 roundResult.innerText = 'It\'s a Tie!';
             }
             roundResults.append(roundResult);
@@ -73,7 +75,7 @@ rockBtn.addEventListener('click', (e) => {
     computerSelection = computerPlay();
     playerSelection = 'rock';
     playRound(playerSelection, computerSelection);
-    if (roundsPlayed == playTo.value) {
+    if (playerScoreCount == playTo.value || cpuScoreCount === playTo.value) {
         gameEnd();
     }
 })
@@ -81,7 +83,7 @@ paperBtn.addEventListener('click', (e) => {
     computerSelection = computerPlay();
     playerSelection = 'paper';
     playRound(playerSelection, computerSelection);
-    if (roundsPlayed == playTo.value) {
+    if (playerScoreCount == playTo.value || cpuScoreCount === playTo.value) {
         gameEnd();
     }
 })
@@ -89,7 +91,7 @@ scissorBtn.addEventListener('click', (e) => {
     computerSelection = computerPlay();
     playerSelection = 'scissor';
     playRound(playerSelection, computerSelection);
-    if (roundsPlayed == playTo.value) {
+    if (playerScoreCount == playTo.value || cpuScoreCount === playTo.value) {
         gameEnd();
     }
 })

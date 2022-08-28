@@ -14,10 +14,13 @@ h1, h2, p{
     font-size: 18px;
 }
 
+
+
 .roundResults p {
     overflow-wrap: anywhere;
     line-height: 19px;
-    margin: 5px;
+    margin-bottom: 15px;
+    margin-top: 0;
 }
 #playto {
     border-radius: 5px;
